@@ -5,17 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fito Class Men</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
+    * {
       margin: 0;
-      padding: 20px;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      height: 100%;
+      font-family: Arial, sans-serif;
       background-color: #000000; /* Fondo negro */
       color: #dcdcdc; /* Texto gris ultraclaro */
-      text-align: center;
-      min-height: 100vh; /* Asegura que el contenido ocupe toda la pantalla */
       display: flex;
       flex-direction: column;
-      justify-content: space-between; /* Espaciado entre contenido y footer */
+    }
+    .content {
+      flex: 1; /* Ocupa el espacio restante entre header y footer */
+      text-align: center;
+      padding: 20px;
     }
     .logo {
       margin-bottom: 20px;
@@ -27,24 +33,25 @@
       margin-top: 30px;
     }
     .card {
-      border: 1px solid #333333; /* Borde gris oscuro */
+      border: 1px solid #dddddd; /* Borde gris claro */
       border-radius: 8px;
       padding: 20px;
-      background-color: #1a1a1a; /* Fondo de tarjeta gris oscuro */
+      background-color: #ffffff; /* Fondo blanco */
       text-align: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra */
     }
     .card h2 {
       font-size: 20px;
-      color: #ffffff; /* Título de tarjeta blanco */
+      color: #000000; /* Título de tarjeta negro */
     }
     .card p {
       font-size: 16px;
-      color: #dcdcdc; /* Texto de tarjeta gris ultraclaro */
+      color: #333333; /* Texto de tarjeta gris oscuro */
       margin: 10px 0;
     }
     .card .price {
       font-size: 24px;
-      color: #ffffff; /* Precio blanco */
+      color: #000000; /* Precio negro */
       font-weight: bold;
     }
     footer {
@@ -53,51 +60,49 @@
       padding: 10px 20px;
       text-align: center;
       font-size: 14px;
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5); /* Sombra superior */
     }
   </style>
 </head>
 <body>
-  <!-- Logo SVG Directamente en el HTML -->
-  <div class="logo">
-    <svg xmlns="http://www.w3.org/2000/svg" width="300" height="100" viewBox="0 0 300 100">
-      <rect width="300" height="100" fill="black" />
-      <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" fill="white" font-size="36" font-family="Arial, sans-serif">
-        Fito Class Men
-      </text>
-    </svg>
-  </div>
+  <!-- Contenido Principal -->
+  <div class="content">
+    <!-- Logo SVG Directamente en el HTML -->
+    <div class="logo">
+      <svg xmlns="http://www.w3.org/2000/svg" width="300" height="100" viewBox="0 0 300 100">
+        <rect width="300" height="100" fill="black" />
+        <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" fill="white" font-size="36" font-family="Arial, sans-serif">
+          Fito Class Men
+        </text>
+      </svg>
+    </div>
 
-  <!-- Párrafos -->
-  <p>Descubre la esencia del lujo que redefine tus expectativas.</p>
-  <p>Cada detalle está diseñado para brindarte exclusividad y distinción.</p>
-  <p>Haz del lujo una experiencia diaria. Porque te lo mereces.</p>
+    <!-- Párrafos -->
+    <p>Descubre la esencia del lujo que redefine tus expectativas.</p>
+    <p>Cada detalle está diseñado para brindarte exclusividad y distinción.</p>
+    <p>Haz del lujo una experiencia diaria. Porque te lo mereces.</p>
 
-  <!-- Tarjetas -->
-  <div class="card-container">
-    <div class="card">
-      <h2>Producto Exclusivo 1</h2>
-      <p>Calidad premium y diseño elegante.</p>
-      <p class="price">$199</p>
-    </div>
-    <div class="card">
-      <h2>Producto Exclusivo 2</h2>
-      <p>Estilo único para cualquier ocasión.</p>
-      <p class="price">$299</p>
-    </div>
-    <div class="card">
-      <h2>Producto Exclusivo 3</h2>
-      <p>Sofisticación al alcance de tu mano.</p>
-      <p class="price">$399</p>
-    </div>
-    <div class="card">
-      <h2>Producto Exclusivo 4</h2>
-      <p>El complemento perfecto para tu estilo.</p>
-      <p class="price">$499</p>
+    <!-- Tarjetas -->
+    <div class="card-container">
+      <div class="card">
+        <h2>Producto Exclusivo 1</h2>
+        <p>Calidad premium y diseño elegante.</p>
+        <p class="price">$199</p>
+      </div>
+      <div class="card">
+        <h2>Producto Exclusivo 2</h2>
+        <p>Estilo único para cualquier ocasión.</p>
+        <p class="price">$299</p>
+      </div>
+      <div class="card">
+        <h2>Producto Exclusivo 3</h2>
+        <p>Sofisticación al alcance de tu mano.</p>
+        <p class="price">$399</p>
+      </div>
+      <div class="card">
+        <h2>Producto Exclusivo 4</h2>
+        <p>El complemento perfecto para tu estilo.</p>
+        <p class="price">$499</p>
+      </div>
     </div>
   </div>
 
