@@ -92,29 +92,69 @@
       font-size: 18px;
       color: #dcdcdc; /* Texto gris claro */
       font-style: italic;
-    }
+    }/* Contenedor del slider */
+.slider-container {
+  position: relative;
+  overflow: hidden; /* Oculta las tarjetas fuera del área visible */
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto; /* Centra el slider */
+}
+
+/* Sombreado en los extremos del slider */
+.slider-container::before,
+.slider-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 50px; /* Ancho del sombreado */
+  height: 100%; /* Altura completa */
+  z-index: 2; /* Por encima del slider */
+  pointer-events: none; /* Permite clics a través del sombreado */
+}
+
+.slider-container::before {
+  left: 0;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)); /* Degradado desde oscuro a transparente */
+}
+
+.slider-container::after {
+  right: 0;
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)); /* Degradado desde oscuro a transparente */
+}
+
+/* Carrusel */
+.slider {
+  display: flex; /* Coloca las tarjetas en línea */
+  transition: transform 0.5s ease-in-out; /* Transición suave para el movimiento */
+  will-change: transform; /* Mejora el rendimiento */
+}
+
+/* Tarjetas */
+.card {
+  flex: 0 0 300px; /* Ancho fijo para las tarjetas */
+  margin-right: 20px; /* Espaciado entre tarjetas */
+  background-color: #ffffff; /* Fondo blanco */
+  border-radius: 12px; /* Bordes redondeados */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra */
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animaciones */
+}
+
+/* Efecto hover en tarjetas */
+.card:hover {
+  transform: scale(1.08); /* Aumenta ligeramente el tamaño */
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3); /* Sombra más intensa */
+}
     .card-container {
       display: flex; /* Flexbox para las tarjetas */
       flex-wrap: wrap; /* Permite que las tarjetas bajen a una nueva fila si no hay espacio */
       justify-content: center; /* Centra las tarjetas horizontalmente */
       gap: 20px; /* Espaciado entre tarjetas */
     }
-    .card {
-      display: flex;
-      flex-direction: column; /* Organiza contenido verticalmente */
-      align-items: center; /* Centra el contenido horizontalmente */
-      width: 250px;
-      border: none; /* Eliminamos el borde tradicional */
-      border-radius: 12px;
-      padding: 20px;
-      background-color: #ffffff; /* Fondo blanco */
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra moderna */
-      transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animación al pasar el mouse */
-    }
-    .card:hover {
-      transform: scale(1.08); /* Aumenta ligeramente el tamaño al pasar el mouse */
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3); /* Sombra más intensa */
-    }
+   
+  
     .card img {
       width: 100%;
       max-width: 200px;
