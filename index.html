@@ -13,15 +13,8 @@
       color: #dcdcdc; /* Texto gris ultraclaro */
       text-align: center;
     }
-    h1 {
-      font-size: 48px;
-      color: #ffffff; /* Título blanco */
+    .logo {
       margin-bottom: 20px;
-    }
-    p {
-      font-size: 18px;
-      color: #dcdcdc; /* Texto gris ultraclaro */
-      margin: 10px 0;
     }
     .card-container {
       display: grid;
@@ -50,35 +43,25 @@
       color: #ffffff; /* Precio blanco */
       font-weight: bold;
     }
-
-    /* Media Queries para pantallas más pequeñas */
-    @media (max-width: 768px) {
-      h1 {
-        font-size: 36px; /* Ajustar tamaño del título */
-      }
-      p {
-        font-size: 16px; /* Reducir tamaño de párrafos */
-      }
-    }
-    @media (max-width: 480px) {
-      h1 {
-        font-size: 28px; /* Más pequeño para móviles */
-      }
-      p {
-        font-size: 14px;
-      }
-      .card-container {
-        grid-template-columns: 1fr; /* Una sola columna en pantallas pequeñas */
-      }
-    }
   </style>
 </head>
 <body>
-  <h1>Luxury Brand</h1>
+  <!-- Logo SVG Directamente en el HTML -->
+  <div class="logo">
+    <svg xmlns="http://www.w3.org/2000/svg" width="300" height="100" viewBox="0 0 300 100">
+      <rect width="300" height="100" fill="black" />
+      <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" fill="white" font-size="36" font-family="Arial, sans-serif">
+        Luxury Brand
+      </text>
+    </svg>
+  </div>
+
+  <!-- Párrafos -->
   <p>Descubre la esencia del lujo que redefine tus expectativas.</p>
   <p>Cada detalle está diseñado para brindarte exclusividad y distinción.</p>
   <p>Haz del lujo una experiencia diaria. Porque te lo mereces.</p>
 
+  <!-- Tarjetas -->
   <div class="card-container">
     <div class="card">
       <h2>Producto Exclusivo 1</h2>
