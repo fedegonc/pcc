@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fito Class Men</title>
+  <title>Fito Class Watches</title>
   <!-- Enlace a la fuente Montserrat -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
@@ -35,18 +35,30 @@
       font-weight: bold;
     }
     .card-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive */
-      gap: 20px;
+      display: flex; /* Flexbox para las tarjetas */
+      flex-wrap: wrap; /* Permite que las tarjetas bajen a una nueva fila si no hay espacio */
+      justify-content: center; /* Centra las tarjetas horizontalmente */
+      gap: 20px; /* Espaciado entre tarjetas */
       margin-top: 30px;
     }
     .card {
+      display: flex;
+      flex-direction: column; /* Organiza contenido verticalmente */
+      align-items: center; /* Centra el contenido horizontalmente */
+      width: 250px;
       border: 1px solid #dddddd; /* Borde gris claro */
       border-radius: 8px;
       padding: 20px;
       background-color: #ffffff; /* Fondo blanco */
       text-align: center;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra */
+    }
+    .card img {
+      width: 100%;
+      max-width: 200px;
+      height: auto;
+      margin-bottom: 15px; /* Espaciado debajo de la imagen */
+      border-radius: 8px; /* Redondea los bordes de la imagen */
     }
     .card h2 {
       font-size: 20px;
@@ -61,6 +73,23 @@
       font-size: 24px;
       color: #000000; /* Precio negro */
       font-weight: bold;
+    }
+    .whatsapp-button {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #ffffff;
+      background-color: #25d366; /* Verde WhatsApp */
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      cursor: pointer;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra */
+    }
+    .whatsapp-button:hover {
+      background-color: #1ebe57; /* Verde más oscuro al pasar el mouse */
     }
     footer {
       background-color: #1a1a1a; /* Fondo gris oscuro */
@@ -79,47 +108,55 @@
       <svg xmlns="http://www.w3.org/2000/svg" width="300" height="100" viewBox="0 0 300 100">
         <rect width="300" height="100" fill="black" />
         <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" fill="white" font-size="36" font-family="Montserrat, Arial, sans-serif">
-          Fito Class Men
+          Fito Class Watches
         </text>
       </svg>
     </div>
 
     <!-- Mensaje de alto valor -->
-    <p class="high-value-message">"No compres ropa, invierte en tu estilo."</p>
-
-    <!-- Párrafos -->
-    <p>Descubre la esencia del lujo que redefine tus expectativas.</p>
-    <p>Cada detalle está diseñado para brindarte exclusividad y distinción.</p>
-    <p>Haz del lujo una experiencia diaria. Porque te lo mereces.</p>
+    <p class="high-value-message">"Tu estilo no tiene límites, y el tiempo tampoco."</p>
 
     <!-- Tarjetas -->
     <div class="card-container">
       <div class="card">
-        <h2>Producto Exclusivo 1</h2>
-        <p>Calidad premium y diseño elegante.</p>
+        <img src="https://via.placeholder.com/200x200?text=Reloj+1" alt="Reloj 1">
+        <h2>Reloj Clásico</h2>
+        <p>Diseño atemporal y elegancia.</p>
         <p class="price">$199</p>
       </div>
       <div class="card">
-        <h2>Producto Exclusivo 2</h2>
-        <p>Estilo único para cualquier ocasión.</p>
+        <img src="https://via.placeholder.com/200x200?text=Reloj+2" alt="Reloj 2">
+        <h2>Reloj Deportivo</h2>
+        <p>Resistencia y estilo para aventuras.</p>
         <p class="price">$299</p>
       </div>
       <div class="card">
-        <h2>Producto Exclusivo 3</h2>
-        <p>Sofisticación al alcance de tu mano.</p>
+        <img src="https://via.placeholder.com/200x200?text=Reloj+3" alt="Reloj 3">
+        <h2>Reloj Digital</h2>
+        <p>Innovación para el día a día.</p>
         <p class="price">$399</p>
       </div>
       <div class="card">
-        <h2>Producto Exclusivo 4</h2>
-        <p>El complemento perfecto para tu estilo.</p>
+        <img src="https://via.placeholder.com/200x200?text=Reloj+4" alt="Reloj 4">
+        <h2>Reloj de Lujo</h2>
+        <p>Exclusividad y perfección.</p>
         <p class="price">$499</p>
       </div>
     </div>
+
+    <!-- Botón de WhatsApp -->
+    <a
+      class="whatsapp-button"
+      href="https://wa.link/7018nk" 
+      target="_blank"
+    >
+      Contactar por WhatsApp
+    </a>
   </div>
 
   <!-- Footer -->
   <footer>
-    © 2024 Fito Class Men. Todos los derechos reservados.
+    © 2024 Fito Class Watches. Todos los derechos reservados.
   </footer>
 </body>
 </html>
