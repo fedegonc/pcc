@@ -15,22 +15,24 @@
     html, body {
       height: 100%;
       font-family: 'Montserrat', Arial, sans-serif; /* Fuente Montserrat */
-      background-color: #000000; /* Fondo negro */
       color: #dcdcdc; /* Texto gris ultraclaro */
       display: flex;
       flex-direction: column;
       overflow-x: hidden; /* Evitar scroll horizontal */
     }
     body {
-      animation: fadeIn 1s ease-in-out; /* Animación suave al cargar */
+      background: url('https://images.pexels.com/photos/13009437/pexels-photo-13009437.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') no-repeat center center/cover;
+      position: relative;
     }
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-      }
-      to {
-        opacity: 1;
-      }
+    body::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6); /* Oscurece la imagen de fondo */
+      z-index: -1;
     }
     .content {
       flex: 1;
@@ -38,45 +40,17 @@
       padding: 20px;
     }
     .logo {
-      position: relative;
       font-size: 48px;
       color: #ffffff; /* Texto blanco */
       margin-bottom: 20px;
       font-weight: bold;
-      display: inline-block;
-      padding: 50px 20px;
       text-transform: uppercase;
-      background: url('https://images.pexels.com/photos/13009437/pexels-photo-13009437.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') no-repeat center center/cover;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Sombra debajo del fondo */
-      overflow: hidden;
-      z-index: 1;
-    }
-    .logo::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.5); /* Oscurece el fondo */
-      z-index: -1;
     }
     .high-value-message {
       margin: 20px 0;
       font-size: 24px;
       color: #f1c40f; /* Texto amarillo para destacar */
       font-weight: bold;
-      animation: slideIn 1.5s ease;
-    }
-    @keyframes slideIn {
-      0% {
-        transform: translateY(-30px);
-        opacity: 0;
-      }
-      100% {
-        transform: translateY(0);
-        opacity: 1;
-      }
     }
     .welcome-message {
       margin: 20px 0;
@@ -89,15 +63,6 @@
       flex-wrap: wrap; /* Permite que las tarjetas bajen a una nueva fila si no hay espacio */
       justify-content: center; /* Centra las tarjetas horizontalmente */
       gap: 20px; /* Espaciado entre tarjetas */
-      animation: fadeInCards 1.8s ease;
-    }
-    @keyframes fadeInCards {
-      0% {
-        opacity: 0;
-      }
-      100% {
-        opacity: 1;
-      }
     }
     .card {
       display: flex;
@@ -173,7 +138,7 @@
 <body>
   <!-- Contenido Principal -->
   <div class="content">
-    <!-- Logo reemplazado con fondo -->
+    <!-- Logo -->
     <div class="logo">Cardinal View</div>
 
     <!-- Mensaje de alto valor -->
