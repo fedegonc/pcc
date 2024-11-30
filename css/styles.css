@@ -1,13 +1,14 @@
-/* General */
+/* === Reset Básico === */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* === Estilos Globales === */
 html, body {
   height: 100%;
-  font-family: 'Montserrat', Arial, sans-serif; /* Fuente Montserrat */
+  font-family: 'Montserrat', Arial, sans-serif; /* Fuente principal */
   color: #dcdcdc; /* Texto gris ultraclaro */
   display: flex;
   flex-direction: column;
@@ -30,7 +31,7 @@ body::before {
   z-index: -1;
 }
 
-/* Navbar */
+/* === Navbar === */
 .navbar {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.8); /* Fondo semitransparente */
@@ -68,10 +69,10 @@ body::before {
   color: #f1c40f; /* Amarillo al pasar el mouse */
 }
 
-/* Contenido principal */
+/* === Contenido Principal === */
 .content {
   flex: 1;
-  text-align: center; /* Centrado para mejor UX */
+  text-align: center;
   padding: 20px;
 }
 
@@ -86,7 +87,7 @@ body::before {
 .high-value-message {
   margin: 20px 0;
   font-size: 24px;
-  color: #f1c40f; /* Texto amarillo para destacar */
+  color: #f1c40f; /* Texto amarillo */
   font-weight: bold;
 }
 
@@ -97,54 +98,51 @@ body::before {
   font-style: italic;
 }
 
-/* Contenedor del slider */
+/* === Slider === */
 .slider-container {
   position: relative;
-  overflow: hidden; /* Oculta las tarjetas fuera del área visible */
+  overflow: hidden;
   width: 100%;
   max-width: 1200px;
-  margin: 0 auto; /* Centra el slider */
+  margin: 0 auto;
 }
 
-/* Sombreado en los extremos del slider */
 .slider-container::before,
 .slider-container::after {
   content: '';
   position: absolute;
   top: 0;
-  width: 50px; /* Ancho del sombreado */
-  height: 100%; /* Altura completa */
-  z-index: 2; /* Por encima del slider */
-  pointer-events: none; /* Permite clics a través del sombreado */
+  width: 50px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
 }
 
 .slider-container::before {
   left: 0;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)); /* Degradado desde oscuro a transparente */
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
 }
 
 .slider-container::after {
   right: 0;
-  background: linear-gradient(to left, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)); /* Degradado desde oscuro a transparente */
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
 }
 
-/* Carrusel */
 .slider {
-  display: flex; /* Coloca las tarjetas en línea */
-  transition: transform 0.5s ease-in-out; /* Transición suave para el movimiento */
-  will-change: transform; /* Mejora el rendimiento */
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  will-change: transform;
 }
 
-/* Tarjetas */
 .card {
-  flex: 0 0 300px; /* Ancho fijo para las tarjetas */
-  margin-right: 20px; /* Espaciado entre tarjetas */
+  flex: 0 0 300px;
+  margin-right: 20px;
   background-color: #ffffff; /* Fondo blanco */
-  border-radius: 12px; /* Bordes redondeados */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra */
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   text-align: center;
   padding: 20px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animaciones */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card img {
@@ -155,12 +153,12 @@ body::before {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
-/* Botones de navegación */
+/* Botones del Slider */
 .slider-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.6); /* Fondo semitransparente */
+  background-color: rgba(0, 0, 0, 0.6);
   color: #ffffff;
   border: none;
   border-radius: 50%;
@@ -182,7 +180,7 @@ body::before {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* Botón de WhatsApp */
+/* === Botón de WhatsApp === */
 .whatsapp-button {
   position: fixed;
   bottom: 20px;
@@ -203,5 +201,5 @@ body::before {
 .whatsapp-button:hover {
   background-color: #1ebe57;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-  transform: translateY(-3px); /* Elevación */
+  transform: translateY(-3px);
 }
