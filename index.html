@@ -22,36 +22,49 @@
     }
     .content {
       flex: 1;
-      text-align: left; /* Todo alineado a la izquierda */
+      text-align: center; /* Centrado para mejor UX */
       padding: 20px;
     }
     .logo {
       margin-bottom: 20px;
     }
     .logo svg {
-      display: block; /* Asegura que el logo no tenga bugs de visualización */
+      display: block;
+      margin: 0 auto; /* Centra el logo horizontalmente */
     }
     .high-value-message {
       margin: 20px 0;
-      font-size: 20px;
+      font-size: 24px;
       color: #f1c40f; /* Texto amarillo para destacar */
       font-weight: bold;
+    }
+    .welcome-message {
+      margin: 20px 0;
+      font-size: 18px;
+      color: #dcdcdc; /* Texto gris claro */
+      font-style: italic;
     }
     .card-container {
       display: flex; /* Flexbox para las tarjetas */
       flex-wrap: wrap; /* Permite que las tarjetas bajen a una nueva fila si no hay espacio */
+      justify-content: center; /* Centra las tarjetas horizontalmente */
       gap: 20px; /* Espaciado entre tarjetas */
     }
     .card {
       display: flex;
       flex-direction: column; /* Organiza contenido verticalmente */
-      align-items: flex-start; /* Alinea contenido a la izquierda */
+      align-items: center; /* Centra el contenido horizontalmente */
       width: 250px;
       border: 1px solid #dddddd; /* Borde gris claro */
       border-radius: 8px;
       padding: 20px;
       background-color: #ffffff; /* Fondo blanco */
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra */
+      transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animación al pasar el mouse */
+    }
+    .card:hover {
+      transform: scale(1.05); /* Aumenta ligeramente el tamaño al pasar el mouse */
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra más intensa */
     }
     .card img {
       width: 100%;
@@ -77,19 +90,21 @@
     .whatsapp-button {
       display: inline-block;
       margin-top: 30px;
-      padding: 10px 20px;
-      font-size: 16px;
+      padding: 15px 30px;
+      font-size: 18px;
       font-weight: bold;
       color: #ffffff;
       background-color: #25d366; /* Verde WhatsApp */
       border: none;
-      border-radius: 5px;
+      border-radius: 8px; /* Bordes redondeados */
       text-decoration: none;
       cursor: pointer;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+      transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Animación al pasar el mouse */
     }
     .whatsapp-button:hover {
-      background-color: #1ebe57; /* Verde más oscuro al pasar el mouse */
+      background-color: #1ebe57; /* Verde más oscuro */
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra más intensa */
     }
     footer {
       background-color: #1a1a1a; /* Fondo gris oscuro */
@@ -115,6 +130,8 @@
 
     <!-- Mensaje de alto valor -->
     <p class="high-value-message">"Le damos otro punto de vista al tiempo."</p>
+    <!-- Mensaje de bienvenida personalizado -->
+    <p class="welcome-message">Descubre relojes que se adaptan a tu estilo y ritmo de vida.</p>
 
     <!-- Tarjetas -->
     <div class="card-container">
