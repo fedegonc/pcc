@@ -139,7 +139,7 @@ body::before {
   margin-right: 20px;
   background-color: #ffffff; /* Fondo blanco */
   border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra más suave */
   text-align: center;
   padding: 20px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -150,7 +150,23 @@ body::before {
   height: auto;
   border-radius: 8px;
   margin-bottom: 15px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  box-shadow: none; /* Elimina cualquier sombra residual */
+}
+
+.card h2 {
+  font-size: 20px;
+  color: #333333; /* Texto más oscuro */
+}
+
+.card p {
+  font-size: 16px;
+  color: #666666; /* Contraste medio */
+}
+
+.card .price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #000000; /* Negro para resaltar los precios */
 }
 
 /* Botones del Slider */
@@ -194,6 +210,7 @@ body::before {
   border-radius: 50px; /* Forma redondeada */
   text-decoration: none;
   cursor: pointer;
+  z-index: 200; /* Asegura que esté por encima de todos los elementos */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
 }
@@ -202,4 +219,13 @@ body::before {
   background-color: #1ebe57;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
   transform: translateY(-3px);
+}
+
+/* === Footer === */
+footer {
+  background-color: #1a1a1a; /* Fondo oscuro */
+  color: #dcdcdc; /* Texto claro */
+  padding: 20px 20px; /* Espaciado suficiente */
+  text-align: center;
+  font-size: 14px;
 }
