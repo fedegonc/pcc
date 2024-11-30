@@ -3,28 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Basic Vercel Page</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <title>Simple Button</title>
   <style>
     body {
-      font-family: sans-serif;
-      text-align: center;
-      padding: 20px;
-      background-color: #f9f9f9;
-    }
-    h1 {
-      color: #333;
-    }
-    p {
-      color: #666;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
     }
     button {
-      padding: 10px 20px;
-      font-size: 16px;
+      padding: 15px 30px;
+      font-size: 18px;
       color: white;
       background-color: #0070f3;
       border: none;
-      border-radius: 4px;
+      border-radius: 5px;
       cursor: pointer;
     }
     button:hover {
@@ -33,13 +29,6 @@
   </style>
 </head>
 <body>
-  <h1>Welcome!</h1>
-  <p>This is a super basic page deployed on Vercel.</p>
-  <button onclick="showMessage()">Click Me</button>
-  <script>
-    function showMessage() {
-      alert("Hello from your page!");
-    }
-  </script>
+  <button onclick="alert('Button clicked!')">Click Me</button>
 </body>
 </html>
