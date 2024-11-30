@@ -190,6 +190,93 @@
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra más intensa */
     transform: translateY(-3px); /* Efecto de elevación */
   }
+
+    /* Contenedor del slider */
+.slider-container {
+  position: relative;
+  overflow: hidden; /* Oculta las tarjetas fuera del área visible */
+  width: 100%;
+  max-width: 1200px; /* Ancho máximo del slider */
+  margin: 0 auto; /* Centra el slider */
+}
+
+/* Carrusel */
+.slider {
+  display: flex; /* Coloca las tarjetas en línea */
+  transition: transform 0.5s ease-in-out; /* Transición suave para el movimiento */
+  will-change: transform; /* Mejora el rendimiento */
+}
+
+/* Tarjetas */
+.card {
+  flex: 0 0 300px; /* Ancho fijo para las tarjetas */
+  margin-right: 20px; /* Espaciado entre tarjetas */
+  background-color: #ffffff; /* Fondo blanco */
+  border-radius: 12px; /* Bordes redondeados */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra */
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animaciones */
+}
+
+/* Efecto hover en tarjetas */
+.card:hover {
+  transform: scale(1.08); /* Aumenta ligeramente el tamaño */
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3); /* Sombra más intensa */
+}
+
+/* Imágenes dentro de las tarjetas */
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Botones de navegación */
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.6); /* Fondo semitransparente */
+  color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  padding: 10px 20px;
+  cursor: pointer;
+  z-index: 10;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover en los botones */
+.slider-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Botón anterior */
+.slider-btn.prev {
+  left: 10px;
+}
+
+/* Botón siguiente */
+.slider-btn.next {
+  right: 10px;
+}
+
+/* Responsividad */
+@media (max-width: 1024px) {
+  .card {
+    flex: 0 0 240px; /* Reduce el tamaño de las tarjetas */
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    flex: 0 0 80%; /* Solo muestra una tarjeta visible en móviles */
+  }
+}
+
   </style>
 </head>
 <body>
