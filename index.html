@@ -19,6 +19,18 @@
       color: #dcdcdc; /* Texto gris ultraclaro */
       display: flex;
       flex-direction: column;
+      overflow-x: hidden; /* Evitar scroll horizontal */
+    }
+    body {
+      animation: fadeIn 1s ease-in-out; /* Animación suave al cargar */
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
     }
     .content {
       flex: 1;
@@ -30,12 +42,34 @@
       color: #ffffff; /* Color blanco */
       margin-bottom: 20px;
       font-weight: bold;
+      animation: popIn 1.2s ease; /* Animación de entrada */
+    }
+    @keyframes popIn {
+      0% {
+        transform: scale(0.8);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
     }
     .high-value-message {
       margin: 20px 0;
       font-size: 24px;
       color: #f1c40f; /* Texto amarillo para destacar */
       font-weight: bold;
+      animation: slideIn 1.5s ease;
+    }
+    @keyframes slideIn {
+      0% {
+        transform: translateY(-30px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
     }
     .welcome-message {
       margin: 20px 0;
@@ -48,22 +82,31 @@
       flex-wrap: wrap; /* Permite que las tarjetas bajen a una nueva fila si no hay espacio */
       justify-content: center; /* Centra las tarjetas horizontalmente */
       gap: 20px; /* Espaciado entre tarjetas */
+      animation: fadeInCards 1.8s ease;
+    }
+    @keyframes fadeInCards {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
     }
     .card {
       display: flex;
       flex-direction: column; /* Organiza contenido verticalmente */
       align-items: center; /* Centra el contenido horizontalmente */
       width: 250px;
-      border: 1px solid #dddddd; /* Borde gris claro */
-      border-radius: 8px;
+      border: none; /* Eliminamos el borde tradicional */
+      border-radius: 12px;
       padding: 20px;
       background-color: #ffffff; /* Fondo blanco */
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra */
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra moderna */
       transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animación al pasar el mouse */
     }
     .card:hover {
-      transform: scale(1.05); /* Aumenta ligeramente el tamaño al pasar el mouse */
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra más intensa */
+      transform: scale(1.08); /* Aumenta ligeramente el tamaño al pasar el mouse */
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3); /* Sombra más intensa */
     }
     .card img {
       width: 100%;
@@ -71,6 +114,11 @@
       height: auto;
       margin-bottom: 15px; /* Espaciado debajo de la imagen */
       border-radius: 8px; /* Redondea los bordes de la imagen */
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Sombra moderna para la imagen */
+      transition: transform 0.3s ease; /* Animación para la imagen */
+    }
+    .card img:hover {
+      transform: scale(1.05); /* Aumenta el tamaño de la imagen al pasar el mouse */
     }
     .card h2 {
       font-size: 20px;
@@ -99,11 +147,12 @@
       text-decoration: none;
       cursor: pointer;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
-      transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Animación al pasar el mouse */
+      transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease; /* Animación al pasar el mouse */
     }
     .whatsapp-button:hover {
       background-color: #1ebe57; /* Verde más oscuro */
       box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra más intensa */
+      transform: translateY(-3px); /* Eleva ligeramente el botón */
     }
     footer {
       background-color: #1a1a1a; /* Fondo gris oscuro */
