@@ -12,6 +12,10 @@
       background-color: #000000; /* Fondo negro */
       color: #dcdcdc; /* Texto gris ultraclaro */
       text-align: center;
+      min-height: 100vh; /* Asegura que el contenido ocupe toda la pantalla */
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; /* Espaciado entre contenido y footer */
     }
     .logo {
       margin-bottom: 20px;
@@ -42,6 +46,18 @@
       font-size: 24px;
       color: #ffffff; /* Precio blanco */
       font-weight: bold;
+    }
+    footer {
+      background-color: #1a1a1a; /* Fondo gris oscuro */
+      color: #dcdcdc; /* Texto gris ultraclaro */
+      padding: 10px 20px;
+      text-align: center;
+      font-size: 14px;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5); /* Sombra superior */
     }
   </style>
 </head>
@@ -84,5 +100,10 @@
       <p class="price">$499</p>
     </div>
   </div>
+
+  <!-- Footer -->
+  <footer>
+    © 2024 Luxury Brand. Todos los derechos reservados.
+  </footer>
 </body>
 </html>
