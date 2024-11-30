@@ -3,16 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Simple Button</title>
+  <title>Simple Page</title>
   <style>
     body {
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       height: 100vh;
       margin: 0;
       font-family: Arial, sans-serif;
       background-color: #ffffff; /* Fondo blanco */
+      text-align: center;
+    }
+    h1 {
+      font-size: 36px;
+      color: #000000; /* Logo negro */
+      margin-bottom: 20px;
     }
     button {
       padding: 15px 30px;
@@ -29,6 +36,7 @@
   </style>
 </head>
 <body>
-  <button onclick="alert('Button clicked!')">Click Me</button>
+  <h1>LOGO</h1>
+  <button onclick="alert('Action performed!')">Do Something</button>
 </body>
 </html>
